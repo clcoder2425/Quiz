@@ -6,6 +6,7 @@ var quizDiv = document.getElementById("quiz-div")
 startPage = document.getElementById("#start-page")
 var Q = 0;
 var highScoreArray=JSON.parse(localStorage.getItem('highScores'))||[];
+var answerCheck = document.getElementById("answerCheck")
 
 var checkLine = document.querySelector("#check-line");
 var scoreBoard = document.querySelector("#submit-page");
@@ -54,7 +55,7 @@ function startGame() {
     //toggle start-page to show and hide//
     var startPage = document.getElementById("start-page");
    startPage.classList.add('hide');
-    // document.getElementById("start-page").setAttribute("class", "hide");
+    
 
     quizDiv.classList.remove("hide")
     countdown()
@@ -65,7 +66,7 @@ function endGame() {
     scoreBoard.classList.remove('hide');
     var userScore= totalScore*secondsLeft;
     finalScore.textContent=userScore;
-    viewScore ();
+   
 
 }
 function askQuestion() {
@@ -81,6 +82,7 @@ function askQuestion() {
             console.log(correctAnswer);
             console.log(userAnswer);
             if (correctAnswer !== userAnswer) {
+                answerCheck.innerHTML= "Wrong"
                 secondsLeft = secondsLeft - 10;
                 if (secondsLeft <= 0) {
                     secondsLeft = 0;
@@ -92,6 +94,7 @@ function askQuestion() {
             else {
                 totalScore++;
                 console.log(totalScore);
+                answerCheck.innerHTML="Correct"
             }
             Q++;
             if (Q<questions.length){
@@ -119,15 +122,4 @@ submitForm.addEventListener('submit', function(event){
     highScoreArray.push(highScore);
     localStorage.setItem('highscores',JSON.stringify(highScoreArray))
 })
-viewScoreBtn.addEventListener('click', viewScore(Event){
-    
-});
 
-//
-function viewScore (){
-    submit-page.classList.add('hide');
-    highScore.classList.remove('hide');
-    var userHighestScore= max(highScoreArray);
-    highScore.textContent=userHighestScore;
-    console.log(userHighestScore);
-}

@@ -10,15 +10,16 @@
 
 <body>
     <main class="container">
-        
-        <header class="start-div">
-            <h1>Coding Quiz Challenge</h1>
-        </header>
-    
+        <center>
+            <header class="start-div">
+                <h1>Coding Quiz Challenge</h1>
+            </header>
+        </center>
+
         <div class="header">
             <!--Left corner to view high score-->
             <button class="button" id="score-button"><br>View score<br></button>
-            
+
         </div>
         <div>
             <p id="timer"> Time Left: 75 seconds</p>
@@ -27,21 +28,26 @@
         <main>
 
             <!--Quiz introduction-->
-            <section class="start-page" id="start-page">
-                <p>Try to answer the following code-related questions within the time limit. Keep in mind that
-                    incorrect answers will penalize your score/time by ten seconds!</p>
-                <p><button id="start-btn">Start</button></p>
-            </section>
+            <center>
+                <section class="start-page" id="start-page">
+                    <p>Try to answer the following code-related questions within the time limit. Keep in mind that
+                        incorrect answers will penalize your score/time by ten seconds!</p>
+                    <p><button id="start-btn">Start</button></p>
+                </section>
+            </center>
 
             <!--Questions section-->
+
             <section class="quiz-div hide" id="quiz-div">
                 <h2 id="question-el">Question goes here</h2>
                 <div id="button-box"></div>
                 <div class="check-line">
                     <p id="check-line"></p>
+                    <hr class="lineBreak hide" id="lineBreak">
+                    <p class = "answerCheck hide " id="answerCheck"></p>
                 </div>
             </section>
-            <!--Question check-->
+            <!--Submit section-->
             <section class="submit-page hide" id="submit-page">
                 <div>
                     <h2 id="finish">Well Done!</h2>
@@ -53,7 +59,7 @@
                 </div>
             </section>
         </main>
-        <!--Submit section-->
+        
         <!--high score section-->
         <section class="highscore-page hide" id="highscore-page">
             <div>
@@ -65,6 +71,7 @@
                 <button class="button" id="clear-btn">Clear Highscores</button>
             </div>
         </section>
+
     </main>
     </main>
     <script src="./assets/js/questions.js"></script>

@@ -4,4 +4,16 @@
     display: none;
 }
 
+.header{
+    display: flex;
+    
+}
+#timer{
+    display: flex;
+    justify-content: right;
+}
+.questionDiv{
+    display:flex
+}
+
 
