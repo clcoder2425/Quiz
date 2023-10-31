@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Score</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <center>
+    <main class="view-score">
+    <h1>High Scores</h1>
+    <ol id = 'score-list'></ol>
+<button onclick="playagain()"> Play Again</button>
+<button onclick ="clearScores()">Clear Score</button>
+    <script>
+        let highScoreArray = JSON.parse(localStorage.getItem('highScores'));
+        
+        highScoreArray.sort(function(a,b){
+            console.log (a.score);
+
+            console.log(b.score);
+            return b.score-a.score;
+        })
+        console.log(highScoreArray);
+        // for (var i=0; i<highScoreArray.length; i++){
+        //     var li= document.createElement('li').textContent=highScoreArray[i].initials+' '+highScoreArray[i].score
+        //     document.getElementById('score-list').append(li)
+        // }
+        highScoreArray.forEach(score => {
+            var li = document.createElement('li');
+            li.textContent = score.initials+ ' '+ score.score
+            console.log(li);
+            document.getElementById('score-list').appendChild(li);
+            
+        });
+        function playagain(){
+            window.location.href='index.html'
+        }
+        function clearScores(){
+localStorage.removeItem('highScores');
+window.location.href='index.html'
+        }
+    </script>
+    </main>
+</center>
+</body>
+</html>

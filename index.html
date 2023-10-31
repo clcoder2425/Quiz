@@ -18,7 +18,7 @@
 
         <div class="header">
             <!--Left corner to view high score-->
-            <button class="button" id="score-button"><br>View score<br></button>
+            <button class="button" id="score-button">View score</button>
 
         </div>
         <div>
@@ -37,39 +37,42 @@
             </center>
 
             <!--Questions section-->
-
-            <section class="quiz-div hide" id="quiz-div">
-                <h2 id="question-el">Question goes here</h2>
-                <div id="button-box"></div>
-                <div class="check-line">
-                    <p id="check-line"></p>
-                    <hr class="lineBreak hide" id="lineBreak">
-                    <p class = "answerCheck hide " id="answerCheck"></p>
-                </div>
-            </section>
+            <div class="wrapper">
+                <section class="quiz-div hide" id="quiz-div">
+                    <center>
+                        <h2 id="question-el"></h2>
+                    </center> <!--Question goes here-->
+                    <center>
+                        <div id="button-box"></div>
+                    </center> <!--choices goes here-->
+                    <div class="check-line">
+                        <p class="answerCheck hide " id="answerCheck"></p>
+                    </div>
+                </section>
+            </div>
             <!--Submit section-->
-            <section class="submit-page hide" id="submit-page">
-                <div>
-                    <h2 id="finish">Well Done!</h2>
-                    <p>Your final score is: <span id="final-score"></span> </p>
-                    <form id="score-form">Enter initial
-                        <input type="text" id="initials">
-                        <button class="button" type="submit" id="submit-btn">Submit</button>
-                    </form>
-                </div>
+            <center>
+                <section class="submit-page hide" id="submit-page">
+                    <div>
+                        <h2 id="finish">Well Done!</h2>
+                        <p>Your final score is: <span id="final-score"></span> </p>
+                        <form id="score-form">Enter initial
+                            <input type="text" id="initials">
+                            <button class="button" type="submit" id="submit-btn">Submit</button>
+                        </form>
+                    </div>
+            </center>
             </section>
         </main>
-        
+
         <!--high score section-->
         <section class="highscore-page hide" id="highscore-page">
             <div>
                 <h2>High scores</h2>
                 <div id="score-record">
                     <p>Your record</p>
-                </div><br><br>
-                <button class="button" id="back-btn">Go back</button>
-                <button class="button" id="clear-btn">Clear Highscores</button>
-            </div>
+
+                </div>
         </section>
 
     </main>

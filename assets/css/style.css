@@ -1,19 +1,140 @@
+* {
+    box-sizing: border-box;
+  }
 
+  html{
+    font-size: 100%;
+  }
 
+body {
+    margin-top: 10rem;
+    background-color: #8B8589;
+    color: #00BFFF
+}
+/* class to show/hide content in the page*/
 .hide {
     display: none;
 }
 
-.header{
-    display: flex;
-    
+#start-page{
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#timer{
+.header {
+    display: flex;
+    font-size: 2rem;
+}
+
+#timer {
     display: flex;
     justify-content: right;
-}
-.questionDiv{
-    display:flex
+    font-size: 2rem;
 }
 
+#start-btn {
+    background-color: #00BFFF;
+    border-radius: 3px;
+    color: white;
+    width: 5rem;
+    height: auto;
+    border: none;
+    box-shadow: #00BFFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+}
 
+.wrapper {
+    display: flex;
+    justify-items: space-between;
+    flex-direction: column;
+    width: 100vw;
+    height: 100px;
+    padding-top: 20px;
+
+
+}
+/* styling question*/
+#question-el {
+    align-content: center;
+    padding-top: 20px;
+}
+/*Styling choices */
+#button-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-wrap:wrap;
+    width: 20rem;
+    padding: 1%;
+    box-shadow: #00BFFF;
+    font-size: 10rem;
+    font-weight: 500;
+    line-height: 4px;
+    gap: 20px 20px;
+    transition: transform 250ms;
+    will-change: transform;
+}
+
+button {
+    background-color: #00BFFF;
+    color: white;
+    width: auto;
+    height: auto;
+    border-radius: 3px;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+#score-button{
+    background-color: #00BFFF;
+    color: white;
+    width: 7rem;
+    height: auto;
+    border-radius: 3px;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 1rem;
+}
+.answerCheck {
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+
+}
+
+.view-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #00BFFF;
+    gap: 20px 20px
+}
+
+#score-list {
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+.submit-page{
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#button-box:hover {
+    transform: translateY(-2px);
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+  }
