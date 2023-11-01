@@ -1,9 +1,9 @@
-
+//Variable declaration//
 
 
 var startBtn = document.getElementById("start-btn");
-var quizDiv = document.getElementById("quiz-div")
-var startPage = document.getElementById("#start-page")
+var quizDiv = document.getElementById("quiz-div");
+var startPage = document.getElementById("#start-page");
 var Q = 0;
 var highScoreArray = JSON.parse(localStorage.getItem('highScores')) || [];
 var answerCheck = document.getElementById("answerCheck")
@@ -14,7 +14,6 @@ var finalScore = document.querySelector("#final-score");
 var userInitial = document.querySelector("#initial");
 
 var submitForm = document.querySelector("#score-form");
-// var highScorePage = document.querySelector("#highscore-page");
 var highScore = document.getElementById('score-record');
 var viewScoreBtn = document.getElementById('score-button');
 var viewScore = document.getElementById('highscore-page');
@@ -52,7 +51,7 @@ function endGame() {
     scoreBoard.classList.remove('hide');
     var userScore = totalScore * secondsLeft;
     finalScore.textContent = userScore;
-    let finalTime= secondsLeft;
+    let finalTime = secondsLeft;
     clearInterval(timerInterval);
     console.log(finalTime);
 
@@ -91,7 +90,7 @@ function askQuestion() {
                 answerCheck.innerHTML = "Correct"; //alerting user when answer is correct
                 answerCheck.classList.remove('hide'); // hiding alert
                 setTimeout(function () {
-                answerCheck.innerHTML = '';
+                    answerCheck.innerHTML = '';
                 }, 1000);
             }
             Q++;
@@ -113,7 +112,7 @@ startBtn.addEventListener("click", startGame);
 submitForm.addEventListener('submit', function (event) {
     event.preventDefault();
     let userInitial = document.getElementById('initials').value
-    let finalTime= secondsLeft;
+    let finalTime = secondsLeft;
     clearInterval(timerInterval);
     console.log(finalTime);
     let highScore = {
@@ -123,9 +122,9 @@ submitForm.addEventListener('submit', function (event) {
     console.log(highScore)
     highScoreArray.push(highScore);
     localStorage.setItem('highScores', JSON.stringify(highScoreArray))
-    window.location.href="highscore.html"
+    window.location.href = "highscore.html"
 })
 
-viewScoreBtn.addEventListener('click', function(){
-    window.location.href='highscore.html';
+viewScoreBtn.addEventListener('click', function () {
+    window.location.href = 'highscore.html';
 })
