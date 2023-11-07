@@ -70,7 +70,7 @@ function startGame() {
 
 
 ## Usage
-The link of the webpage is:  https://clcoder2425.github.io/mars-exploration-app/
+The link of the webpage is:  https://clcoder2425.github.io/Quiz/
 1. Load the webpage.
 2. Click on the start button
 3. Answer the questions by clickling on the correct answer. if answer is correct/wrong, an alert will display below.
